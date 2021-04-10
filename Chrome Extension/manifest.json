@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Discord Styler",
+    "description": "This extension will allow you to customise your Discord experience and make it your own!",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "128.png",
+        "default_popup": "popup.html"
+    },
+    "icons": { "16": "16.png",
+           "48": "48.png",
+          "128": "128.png"
+    },
+    "content_scripts": [{
+        "matches": ["https://discord.com/*"],
+        "js": ["jquery.js", "background.js"]
+    }],
+    "permissions": ["storage"]
+}
